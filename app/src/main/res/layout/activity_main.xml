@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="211dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="State Name Here"
+                android:inputType="textPersonName|textCapWords"
+                android:lines="1"
+                android:text="Maharashtra" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="getStateStat"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Input Indian State Name To Get Statistics"
+            android:textSize="30sp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    android:background="#fff"
+                    app:cardBackgroundColor="#DD2C00"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    app:cardMaxElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_bold"
+
+                            android:text="Indian\nCases"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/cci"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right|center_vertical"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textSize="35sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    android:background="#fff"
+                    app:cardBackgroundColor="#2196F3"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    app:cardMaxElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="Foreign\nCases"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ccf"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right|center_vertical"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textSize="35sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    android:background="#fff"
+                    app:cardBackgroundColor="#263238"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    app:cardMaxElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_bold"
+
+                            android:text="Total\nDeaths"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/death"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right|center_vertical"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textSize="35sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    android:background="#fff"
+                    app:cardBackgroundColor="#FF5252"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    app:cardMaxElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="Total\nCases"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ttl"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right|center_vertical"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textSize="35sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </TableRow>
+
+        </TableLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="335sp"
+            android:layout_height="125dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="#fff"
+            app:cardBackgroundColor="#00BFA5"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="2dp"
+            app:cardMaxElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:text="Discharged Cases"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/disch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:text=""
+                    android:textSize="35sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\n\nAB AppDev\n API: https://api.rootnet.in/covid19-in/stats/latest" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
