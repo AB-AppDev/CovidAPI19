@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.2"
 
     defaultConfig {
-        applicationId "ab.appdev.study.myapplication"
+        applicationId "ab.appdev.study.covidstat"
         minSdkVersion 28
         targetSdkVersion 29
         versionCode 1
