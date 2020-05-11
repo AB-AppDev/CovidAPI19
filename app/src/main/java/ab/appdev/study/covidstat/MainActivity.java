@@ -21,7 +21,7 @@ import org.json.JSONObject;
 public class MainActivity extends AppCompatActivity {
 
   public Button B;
-  private TextView cci, ccf, dt, dis, ttl;
+  private TextView indiancases, foreigncases, totaldeaths, dischargedcases, totalcases;
   private EditText E;
   final String myURL = "https://api.rootnet.in/covid19-in/stats/latest";
   JSONObject response = new JSONObject();
@@ -33,14 +33,13 @@ public class MainActivity extends AppCompatActivity {
 
     E = (EditText) findViewById(R.id.editText);
     B = (Button) findViewById(R.id.button);
-    ccf = (TextView) findViewById(R.id.ccf);
-    cci = (TextView) findViewById(R.id.cci);
-    ttl = (TextView) findViewById(R.id.ttl);
-    dis = (TextView) findViewById(R.id.disch);
-    dt = (TextView) findViewById(R.id.death);
+    foreigncases = (TextView) findViewById(R.id.foreigncases);
+    indiancases = (TextView) findViewById(R.id.indiancases);
+    totalcases = (TextView) findViewById(R.id.totalcases);
+    dischargedcases = (TextView) findViewById(R.id.disch);
+    totaldeaths = (TextView) findViewById(R.id.death);
 
     dataMGMT("Maharashtra");
-
 
     B.setOnClickListener(
         new View.OnClickListener() {
@@ -49,9 +48,6 @@ public class MainActivity extends AppCompatActivity {
             dataMGMT(E.getText().toString());
           }
         });
-
-
-
   }
 
   void dataMGMT(final String State) {
@@ -80,11 +76,11 @@ public class MainActivity extends AppCompatActivity {
                     pa = ar.getJSONObject(iter);
 
                     if (pa.getString("loc").contains(State)) {
-                      ttl.setText(pa.getString("totalConfirmed"));
-                      dis.setText(pa.getString("discharged"));
-                      dt.setText(pa.getString("deaths"));
-                      cci.setText(pa.getString("confirmedCasesIndian"));
-                      ccf.setText(pa.getString("confirmedCasesForeign"));
+                      totalcases.setText(pa.getString("totalConfirmed"));
+                      dischargedcases.setText(pa.getString("dischargedcasescharged"));
+                      totaldeaths.setText(pa.getString("deaths"));
+                      indiancases.setText(pa.getString("confirmedCasesIndian"));
+                      foreigncases.setText(pa.getString("confirmedCasesForeign"));
                       isfound = true;
                       break;
                     }

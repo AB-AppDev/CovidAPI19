@@ -83,7 +83,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/cci"
+                            android:id="@+id/indiancases"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="right|center_vertical"
@@ -120,7 +120,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/ccf"
+                            android:id="@+id/foreigncases"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="right|center_vertical"
@@ -200,7 +200,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/ttl"
+                            android:id="@+id/totalcases"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="right|center_vertical"
