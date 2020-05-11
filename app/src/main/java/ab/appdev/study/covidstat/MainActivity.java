@@ -20,9 +20,9 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
-  public Button B;
+  public Button Search;
   private TextView indiancases, foreigncases, totaldeaths, dischargedcases, totalcases;
-  private EditText E;
+  private EditText StateInput;
   final String myURL = "https://api.rootnet.in/covid19-in/stats/latest";
   JSONObject response = new JSONObject();
 
@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    E = (EditText) findViewById(R.id.editText);
-    B = (Button) findViewById(R.id.button);
+    StateInput = (EditText) findViewById(R.id.statename);
+    Search = (Button) findViewById(R.id.search);
     foreigncases = (TextView) findViewById(R.id.foreigncases);
     indiancases = (TextView) findViewById(R.id.indiancases);
     totalcases = (TextView) findViewById(R.id.totalcases);
@@ -41,11 +41,11 @@ public class MainActivity extends AppCompatActivity {
 
     dataMGMT("Maharashtra");
 
-    B.setOnClickListener(
+    Search.setOnClickListener(
         new View.OnClickListener() {
           @Override
           public void onClick(View v) {
-            dataMGMT(E.getText().toString());
+            dataMGMT(StateInput.getText().toString());
           }
         });
   }
@@ -63,11 +63,8 @@ public class MainActivity extends AppCompatActivity {
                 try {
 
                   String data = response.getString("data");
-
                   JSONObject dataobj = new JSONObject(data);
-
                   String state = dataobj.getString("regional");
-
                   JSONArray ar = new JSONArray(state);
 
                   JSONObject pa;
@@ -98,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
               @Override
               public void onErrorResponse(VolleyError error) {
 
-                B.setText(error.toString());
+                Search.setText(error.toString());
               }
             });
     MySingelton.getInstance(MainActivity.this).addToRequestQue(jsonObjectRequest);
