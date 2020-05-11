@@ -1,4 +1,4 @@
-package ab.appdev.study.myapplication;
+package ab.appdev.study.covidstat;
 
 import org.junit.Test;
 
